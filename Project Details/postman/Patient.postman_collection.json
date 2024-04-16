@@ -1,0 +1,115 @@
+{
+	"info": {
+		"_postman_id": "f2fb105c-1bc4-4733-a9a7-693608328e69",
+		"name": "Patient",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25283957"
+	},
+	"item": [
+		{
+			"name": "/api/patients/update-patient/",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Om\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/patients/update-patient/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"patients",
+						"update-patient",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/patients/create-patient",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"patient_id\": 10,\r\n    \"name\": \"Daniel Walker\",\r\n    \"date_of_birth\": \"1987-08-28\",\r\n    \"gender\": \"M\",\r\n    \"phone_number\": \"+4567890123\",\r\n    \"email\": \"daniel.walker@example.com\",\r\n    \"address\": \"2223 Elm Street\",\r\n    \"city\": \"Westfield\",\r\n    \"state\": \"NJ\",\r\n    \"zipcode\": \"45678\",\r\n    \"country\": \"USA\",\r\n    \"doctor_id\": 4\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/patients/create-patient",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"patients",
+						"create-patient"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/patients/get-patients",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/api/patients/get-patient-by-patient-id/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"patients",
+						"get-patient-by-patient-id",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/patients/delete-patient",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/api/patients/delete-patient/9",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"patients",
+						"delete-patient",
+						"9"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

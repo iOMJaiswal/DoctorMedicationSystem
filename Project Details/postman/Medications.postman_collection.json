@@ -1,0 +1,137 @@
+{
+	"info": {
+		"_postman_id": "997d6d8d-58f7-490c-bc9f-03ceaaacf870",
+		"name": "Medications",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25283957"
+	},
+	"item": [
+		{
+			"name": "/api/medications/get-medications",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/api/medications/get-medication/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"medications",
+						"get-medication",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/medications/delete-medication/2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/api/medications/delete-medication/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"medications",
+						"delete-medication",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/medications/create-medication",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n  {\r\n    \"patient_id\": 4,\r\n    \"medication_name\": \"Ascorill\",\r\n    \"dosage\": \"2mg\",\r\n    \"frequency\": \"After each loose stool, but no more than 4 times a day\",\r\n    \"instructions\": \"Drink plenty of fluids to avoid dehydration.\",\r\n    \"start_date\": \"2024-04-15\",\r\n    \"end_date\": \"2024-04-19\"\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/medications/create-medication",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"medications",
+						"create-medication"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/medications/update-medications/",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"medication_name\": \"SomeOther\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/medications/update-medication/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"medications",
+						"update-medication",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:4000/api/medications/get-medication-by-patient-id/",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/api/medications/get-medication-by-patient-id/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"medications",
+						"get-medication-by-patient-id",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
