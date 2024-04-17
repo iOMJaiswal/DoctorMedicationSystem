@@ -4,22 +4,22 @@ import { useNavigate } from "react-router-dom";
 import Cookies from "js-cookie";
 
 const AddPatient = () => {
-    const doctor_id = Cookies.get("doctor_id")    
-    const [formData, setFormData] = useState({
-        name: "",
-        date_of_birth: "",
-        gender: "",
-        phone_number: "",
-        email: "",
-        address: "",
-        city: "",
-        state: "",
-        zipcode: "",
-        country: "",
-        doctor_id: doctor_id
-      });
+  const doctor_id = Cookies.get("doctor_id");
+  const [formData, setFormData] = useState({
+    name: "",
+    date_of_birth: "",
+    gender: "",
+    phone_number: "",
+    email: "",
+    address: "",
+    city: "",
+    state: "",
+    zipcode: "",
+    country: "",
+    doctor_id: doctor_id,
+  });
 
-      console.log(formData)
+  console.log(formData);
 
   const navigate = useNavigate();
   const [errors, setErrors] = useState({});
@@ -49,7 +49,7 @@ const AddPatient = () => {
     if (Object.keys(validationErrors).length === 0) {
       try {
         await axios.post("http://localhost:4000/api/patients/create-patient", {
-          ...formData
+          ...formData,
         });
         navigate("/"); // Redirect to the desired route after successful submission
       } catch (error) {
@@ -59,7 +59,6 @@ const AddPatient = () => {
       setErrors(validationErrors);
     }
   };
-
 
   return (
     <>
@@ -142,13 +141,15 @@ const AddPatient = () => {
               />
             </div>
             <div>
-              <label
-                className="text-white dark:text-gray-200"
-                htmlFor="gender"
-              >
+              <label className="text-white dark:text-gray-200" htmlFor="gender">
                 Gender
               </label>
-              <select onChange={handleChange} id="gender" className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring">
+              <select
+                onChange={handleChange}
+                id="gender"
+                className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring"
+              >
+                <option>SELECT</option>
                 <option value="M">Male</option>
                 <option value="F">Female</option>
                 <option value="Other">Other</option>
@@ -156,7 +157,10 @@ const AddPatient = () => {
             </div>
 
             <div>
-              <label className="text-white dark:text-gray-200" htmlFor="phone_number">
+              <label
+                className="text-white dark:text-gray-200"
+                htmlFor="phone_number"
+              >
                 Contact Number
               </label>
               <input

@@ -38,14 +38,14 @@ const ViewMedications = () => {
     );
     setFilteredMedications(filtered);
   };
-  const handleDelete = async (medicationId) => {
+  const handleDelete = async (medication_id) => {
     try {
       await axios.post(
-        `http://localhost:4000/api/medications/delete-medication/${medicationId}`
+        `http://localhost:4000/api/medications/delete-medication/${medication_id}`
       );
       setMedications(
         medications.filter(
-          (medication) => medication.medication_id !== medicationId
+          (medication) => medication.medication_id !== medication_id
         )
       );
     } catch (error) {

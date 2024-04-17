@@ -33,7 +33,11 @@ const PatientTable = () => {
       await axios.post(
         `http://localhost:4000/api/patients/delete-patient/${id}`
       );
-      setPatients(patients.filter((patient) => patient.patient_id !== id));
+      const updatedPatients = patients.filter(
+        (patient) => patient.patient_id !== id
+      );
+      setPatients(updatedPatients);
+      setFilteredPatients(updatedPatients);
     } catch (error) {
       console.error("Error deleting patient:", error);
     }

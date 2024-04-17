@@ -28,7 +28,7 @@ const pool = new Pool({
 //       end_date DATE,
 //       CONSTRAINT fk_medication_patient FOREIGN KEY (patient_id) REFERENCES patients(patient_id)
 //     );
-//   `
+// //   `
 //   )
 //   .then((Response) => {
 //     console.log("Table created");
